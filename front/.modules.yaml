@@ -1,0 +1,44 @@
+hoistPattern:
+  - '*'
+hoistedDependencies:
+  '@biomejs/cli-darwin-arm64@1.9.4':
+    '@biomejs/cli-darwin-arm64': private
+  '@biomejs/cli-darwin-x64@1.9.4':
+    '@biomejs/cli-darwin-x64': private
+  '@biomejs/cli-linux-arm64-musl@1.9.4':
+    '@biomejs/cli-linux-arm64-musl': private
+  '@biomejs/cli-linux-arm64@1.9.4':
+    '@biomejs/cli-linux-arm64': private
+  '@biomejs/cli-linux-x64-musl@1.9.4':
+    '@biomejs/cli-linux-x64-musl': private
+  '@biomejs/cli-linux-x64@1.9.4':
+    '@biomejs/cli-linux-x64': private
+  '@biomejs/cli-win32-arm64@1.9.4':
+    '@biomejs/cli-win32-arm64': private
+  '@biomejs/cli-win32-x64@1.9.4':
+    '@biomejs/cli-win32-x64': private
+ignoredBuilds:
+  - '@biomejs/biome'
+included:
+  dependencies: true
+  devDependencies: true
+  optionalDependencies: true
+injectedDeps: {}
+layoutVersion: 5
+nodeLinker: isolated
+packageManager: pnpm@10.6.5
+pendingBuilds: []
+prunedAt: Tue, 01 Apr 2025 07:49:23 GMT
+publicHoistPattern: []
+registries:
+  default: https://registry.npmjs.org/
+skipped:
+  - '@biomejs/cli-darwin-arm64@1.9.4'
+  - '@biomejs/cli-darwin-x64@1.9.4'
+  - '@biomejs/cli-linux-arm64-musl@1.9.4'
+  - '@biomejs/cli-linux-arm64@1.9.4'
+  - '@biomejs/cli-win32-arm64@1.9.4'
+  - '@biomejs/cli-win32-x64@1.9.4'
+storeDir: /home/student/.local/share/pnpm/store/v10
+virtualStoreDir: .pnpm
+virtualStoreDirMaxLength: 120

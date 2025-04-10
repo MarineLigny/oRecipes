@@ -1,0 +1,13 @@
+@use 'styles/reset';
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+  	font-style: normal;
+}
+
+a:-webkit-any-link {
+    cursor: auto;
+}
