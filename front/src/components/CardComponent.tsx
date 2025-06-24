@@ -20,7 +20,7 @@ function CardComponent({recipe}: RecipeList) {
         />
         <h2 className="card-title">{recipe.title}</h2>
         <p className="card-difficulty">{recipe.difficulty}</p>
-        <Link to={`/api/recipes/${recipe.id}`}>
+        <Link to={`/api/recipes/${recipe.slug}`}>
           <button 
             type="button" 
             className="card-btn"

@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
   const getRecipes = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/recipes',)
+        const response = await axios.get('http://localhost:3001/api/recipes',)
         //console.log(response.data);
         setRecipes(response.data);
       } catch (error) {

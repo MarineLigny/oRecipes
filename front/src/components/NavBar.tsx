@@ -21,7 +21,7 @@ function NavBarComponent({recipes}: INavBar) {
           >
           <NavLink  
           className="nav-item" 
-          to={`/api/recipes/${recipe.id}`}
+          to={`/api/recipes/${recipe.slug}`}
           data-discover="true">{recipe.title}
           </NavLink >
         </li>
