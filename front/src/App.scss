@@ -1,0 +1,25 @@
+
+.app {
+	display: flex;
+	flex-direction: row;  
+}
+
+h1 {
+  font-size: 2rem;
+  text-decoration:underline;
+  padding-bottom: 1rem;
+  color:#0a4064;
+}
+
+h3 {
+  background-color: #176497;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.rightbloc {
+	//flex-grow: 1; 
+	padding: 10px;
+}

@@ -1,0 +1,19 @@
+.accueil-page {
+    margin: 2rem;
+    background-color: rgb(247, 245, 245);
+    border: solid 1px rgb(189, 185, 185);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.accueil-text {
+        font-size: 1.2rem;
+        color: #0a4064;
+        margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .accueil-page {
+        margin: 3rem 8rem;
+    }
+}

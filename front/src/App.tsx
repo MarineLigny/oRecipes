@@ -1,19 +1,21 @@
 
 import './App.scss'
-import './Header.scss'
-import './NavBar.scss'
+import './components/Header.scss'
+import './components/NavBar.scss'
+import './components/CardComponent.scss'
 
-import NavBarComponent from './NavBar';
-import Header from './Header';
-import AccueilPage from '../pages/AccueilPage';
-import RecettePage from '../pages/RecettePage';
-import ErrorPage from './ErrorPage';
+import NavBarComponent from './components/NavBar';
+import Header from './components/Header';
+import AccueilPage from './pages/AccueilPage';
+import RecettePage from './pages/RecipePage';
+import ErrorPage from './components/ErrorPage';
 
-import type IRecipe from '../@types/recipe';
+import type IRecipe from '../src/@types/recipe';
 
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router';
+
 
 
 
