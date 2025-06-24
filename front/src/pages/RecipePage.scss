@@ -1,15 +1,15 @@
 .recipe-page {
-    border: solid 2px rgb(189, 185, 185);
-    background: rgb(236, 234, 234);
-    padding: 6px 6px 16px 6px;
+    border: solid 1px rgb(189, 185, 185);
+    background-color: rgb(247, 245, 245);
+    border-radius: 0.3rem;
+    padding: 2rem;
     position: relative;
-    transition: 0.3s;
-    box-shadow: 2px 3px 30px rgba(208, 185, 181, 0.13);
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-inline: auto;
     height: auto;
-    gap: 8px;
+    gap: 0.5rem;
     max-width: 1000px;
 
     .recipe-image {
@@ -17,20 +17,24 @@
         width: 100%;
     }
 
-    .recipe-title h2 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #0a4064;
-        padding-left: 0.2rem;
-    }
-    .recipe-title p {
-        font-weight: bold;
-        color: grey;
-        padding-left: 0.2rem;
+    .recipe-title {
+        padding-inline: 1rem;
+        padding-top: 1rem;
+
+        & h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0a4064;
+        }
+        & p {
+            font-weight: bold;
+            color: grey;
+        }
     }
 }
 .ingredients {
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-inline: 1rem;
     display: flex;
     flex-direction: column;
 
@@ -44,10 +48,8 @@
         display: flex;
 
         span {
-            background-color: #219cee;
-            border-radius: 10px;
-            padding: 0.2rem;
-            color: aliceblue;
+            font-weight: bold;
+            color: #176497;
             text-align: center;
             margin-right: 0.5rem;
             
@@ -56,7 +58,8 @@
     
 }
 .instructions {
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-inline: 1rem;
 
     h4 {
         font-size: 1.275rem;
