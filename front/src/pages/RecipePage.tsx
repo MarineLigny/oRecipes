@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import type IRecipe from "../@types/recipe";
-import { useEffect } from "react";
-import axios from "axios";
 import './RecipePage.scss'
 
 interface RecetteProps {
@@ -23,28 +21,33 @@ function RecettePage({ recipes }: RecetteProps) {
   console.log(recipeSlug);
 
   useEffect(() => {
-    const getRecipe = async () => {
-      if (!recipeSlug) {
-        setError("Aucun identifiant de recette fourni");
-        setIsLoading(false);
-        return;
-      }
-
-      try {
-        setIsLoading(true);
-        setError(null);
-
-        const response = await axios.get(`http://localhost:3001/api/recipes/${recipeSlug}`);
-        console.log(response.data);
-        setRecette(response.data);
-        setIsLoading(false);
-      } catch (error) {
-        console.log('Erreur lors du Fetch', error);
-      }
+    if (!recipeSlug) {
+      setError("Aucun identifiant de recette fourni");
+      setIsLoading(false);
+      return;
     }
-    getRecipe();
-    //console.log(setRecipes);
-  }, [recipeSlug]);
+
+    try {
+      setIsLoading(true);
+      setError(null);
+
+      // Chercher la recette dans les données locales
+      const foundRecipe = recipes.find(recipe =>
+        recipe.slug === recipeSlug || recipe.id.toString() === recipeSlug
+      );
+
+      if (foundRecipe) {
+        setRecette(foundRecipe);
+      } else {
+        setError("Recette non trouvée");
+      }
+      setIsLoading(false);
+    } catch (error) {
+      console.log('Erreur lors de la recherche de recette', error);
+      setError("Erreur lors du chargement de la recette");
+      setIsLoading(false);
+    }
+  }, [recipeSlug, recipes]);
 
   if (isLoading) {
     return <p>Chargement en cours...</p>;

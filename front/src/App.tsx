@@ -12,35 +12,20 @@ import ErrorPage from './components/ErrorPage';
 
 import type IRecipe from '../src/@types/recipe';
 
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { recipes as staticRecipes } from './data/recipes';
 
 
 
 
 function App() {
-  const [recipes, setRecipes] = useState<IRecipe[]>([]);
+  const [recipes] = useState<IRecipe[]>(staticRecipes);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
-
-  useEffect(() => {
-    const getRecipes = async () => {
-      try {
-        const response = await axios.get('http://localhost:3001/api/recipes',)
-        //console.log(response.data);
-        setRecipes(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    getRecipes();
-    //console.log(setRecipes);
-  }, []);
 
   return (
     <div className='app'>
