@@ -1,34 +1,40 @@
 import type IRecipe from '../@types/recipe';
-import { Link, } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 
 interface RecipeList {
   recipe: IRecipe;
 }
 
-function CardComponent({recipe}: RecipeList) {
-//console.log(recipe);
-  //Retourne le morceau de JSX qui décrit une recette
+function CardComponent({ recipe }: RecipeList) {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/api/recipes/${recipe.slug}`);
+  };
+
+  const handleButtonClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigate(`/api/recipes/${recipe.slug}`);
+  };
+
   return (
-    <Link to={`/api/recipes/${recipe.slug}`} className="card-link">
-      <div className="card">
-          <img
-            src={recipe.thumbnail}
-            alt="cookies"
-            className="card-img"
-          />
-          <h2 className="card-title">{recipe.title}</h2>
-          <p className="card-difficulty">{recipe.difficulty}</p>
-          <Link to={`/api/recipes/${recipe.slug}`}>
-            <button 
-              type="button" 
-              className="card-btn"
-              >
-              Voir la recette
-            </button>
-          </Link>
-      </div>  
-    </Link> 
+    <div className="card" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
+      <img
+        src={recipe.thumbnail}
+        alt="cookies"
+        className="card-img"
+      />
+      <h2 className="card-title">{recipe.title}</h2>
+      <p className="card-difficulty">{recipe.difficulty}</p>
+      <button
+        type="button"
+        className="card-btn"
+        onClick={handleButtonClick}
+      >
+        Voir la recette
+      </button>
+    </div>
   );
 }
 

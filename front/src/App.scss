@@ -1,14 +1,13 @@
-
 .app {
-	display: flex;
-	flex-direction: row;  
+  display: flex;
+  flex-direction: row;
 }
 
 h1 {
   font-size: 2rem;
-  text-decoration:underline;
+  text-decoration: underline;
   padding-bottom: 1rem;
-  color:#0a4064;
+  color: #0a4064;
 }
 
 h3 {
@@ -20,7 +19,7 @@ h3 {
 }
 
 .rightbloc {
-	//flex-grow: 1; 
-	padding: 10px;
+  //flex-grow: 1; 
+  padding: 10px;
   width: 100%;
 }
