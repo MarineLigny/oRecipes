@@ -21,8 +21,8 @@
 }
 
 .burger-button {
-  display: none;
-  /* Caché par défaut sur desktop */
+  display: block;
+  /* Visible sur tous les formats d'écran */
   background: none;
   border: none;
   cursor: pointer;
@@ -38,14 +38,6 @@
   &:focus {
     outline: none;
     background-color: rgba(23, 100, 151, 0.2);
-  }
-}
-
-/* Responsive styles */
-@media (max-width: 1024px) {
-  .burger-button {
-    display: block;
-    /* Visible sur tablette et mobile */
   }
 }
 

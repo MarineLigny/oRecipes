@@ -1,6 +1,7 @@
 .app {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  /* Changé pour une mise en page verticale */
 }
 
 h1 {
@@ -19,7 +20,6 @@ h3 {
 }
 
 .rightbloc {
-  //flex-grow: 1; 
+  flex-grow: 1;
   padding: 10px;
-  width: 100%;
 }

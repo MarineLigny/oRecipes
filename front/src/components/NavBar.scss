@@ -7,6 +7,21 @@
   min-height: 100vh;
   max-width: 15%;
   transition: transform 0.3s ease;
+
+  /* Caché par défaut sur tous les écrans - Menu burger uniquement */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  max-width: 80vw;
+  height: 100vh;
+  z-index: 1000;
+  transform: translateX(-100%);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+
+  &.mobile-open {
+    transform: translateX(0);
+  }
 }
 
 .nav-item {
@@ -23,48 +38,25 @@
   }
 }
 
+/* Overlay toujours disponible quand le menu est ouvert */
 .mobile-overlay {
-  display: none;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
-/* Responsive styles pour mobile et tablette */
-@media (max-width: 1024px) {
-  .leftbloc {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 280px;
-    max-width: 80vw;
-    height: 100vh;
-    z-index: 1000;
-    transform: translateX(-100%);
-    /* Caché par défaut */
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+/* Styles des nav-items pour le menu burger */
+.nav-item {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-    &.mobile-open {
-      transform: translateX(0);
-      /* Visible quand ouvert */
-    }
-  }
-
-  .mobile-overlay {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
-
-  .nav-item {
-    display: block;
-    padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }

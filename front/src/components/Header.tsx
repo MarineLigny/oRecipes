@@ -10,7 +10,7 @@ function Header({ isMobileMenuOpen, onToggleMobileMenu }: HeaderProps) {
   return (
     <header className="header">
       <Link to="/">
-        <img className="header-img" src="/src/logo.png" alt="logo orecipes" />
+        <img className="header-img" src="./logo.png" alt="logo orecipes" />
       </Link>
       <h1 className="header-title">Mon livre de recettes </h1>
 

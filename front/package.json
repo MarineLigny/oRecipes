@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.16.1",
     "axios": "^1.8.4",
     "lucide-react": "^0.544.0",
     "react": "^19.0.0",

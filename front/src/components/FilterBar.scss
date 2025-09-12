@@ -4,7 +4,8 @@
   grid-template-rows: 1fr;
   grid-column-gap: 16px;
   align-items: center;
-  margin: 1.25rem 0;
+  width: 90%;
+  margin: 0.75rem auto;
   padding: 1rem;
   background-color: #f8f9fa;
   border-radius: 8px;
@@ -129,10 +130,6 @@
 
 /* Responsive design - seulement pour très petits écrans */
 @media (max-width: 480px) {
-  .filter-bar {
-    flex-direction: column;
-    gap: 15px;
-  }
 
   .difficulty-container {
     min-width: 100%;
@@ -143,9 +140,10 @@
   }
 }
 
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 1024px) {
   .filter-bar {
     grid-template-columns: repeat(4, 1fr);
+    width: 80%;
   }
 
   .difficulty-container {

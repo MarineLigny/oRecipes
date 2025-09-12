@@ -1,19 +1,36 @@
+.accueil-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0a4064;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+  width: 95%;
+}
+
 .accueil-page {
-    margin: 2rem;
-    background-color: rgb(247, 245, 245);
-    border: solid 1px rgb(189, 185, 185);
-    border-radius: 0.5rem;
-    padding: 1rem;
+  margin: 2rem;
+  background-color: rgb(247, 245, 245);
+  border: solid 1px rgb(189, 185, 185);
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 
 .accueil-text {
-        font-size: 1.2rem;
-        color: #0a4064;
-        margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #0a4064;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1024px) {
-    .accueil-page {
-        margin: 3rem 8rem;
-    }
+  .accueil-page {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .accueil-title {
+    flex-direction: row;
+    width: 80%;
+  }
 }

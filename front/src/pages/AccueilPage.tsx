@@ -2,6 +2,7 @@ import CardComponent from '../components/CardComponent';
 import { FilterBar } from '../components/FilterBar';
 import type IRecipe from '../@types/recipe';
 import { useState, useMemo } from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import './AccueilPage.scss';
 
 interface RecipeProps {
@@ -23,6 +24,19 @@ function AccueilPage({ recipes }: RecipeProps) {
 
   return (
     <div>
+
+      <section className='accueil-title'>
+        <DotLottieReact
+          src="/animations/Recipe Book.json"
+          loop
+          autoplay
+          style={{ width: '150px', height: '150px', margin: '0 auto' }}
+        />
+        <p className='accueil-title'>
+          Mon petit journal de bord de recettes, accompagné de photos et des ingrédients et instructions de cuisine.
+        </p>
+      </section>
+
       <FilterBar
         searchTerm={searchTerm}
         difficulty={difficulty}
