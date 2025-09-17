@@ -53,6 +53,10 @@ function RecettePage({ recipes }: RecetteProps) {
     return <p>Chargement en cours...</p>;
   }
 
+  if (error) {
+    return <p>Erreur: {error}</p>;
+  }
+
   if (!recette) {
     return <p>Recette non trouvée</p>;
   }
