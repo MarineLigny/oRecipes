@@ -58,7 +58,7 @@ function RecettePage({ recipes }: RecetteProps) {
   }
 
   return (
-    <div>
+    <div className="recipe-page-container">
       <button
         className="back-button"
         onClick={() => navigate('/')}
