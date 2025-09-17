@@ -3,18 +3,20 @@ import './App.scss'
 import './components/Header.scss'
 import './components/NavBar.scss'
 import './components/CardComponent.scss'
+import './components/FilterBar.scss'
+import './components/footer.scss'
 
 import NavBarComponent from './components/NavBar';
 import Header from './components/Header';
 import AccueilPage from './pages/AccueilPage';
 import RecettePage from './pages/RecipePage';
 import ErrorPage from './components/ErrorPage';
-
+import MentionsLegales from './pages/MentionsLegales';
 import type IRecipe from '../src/@types/recipe';
-
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { recipes as staticRecipes } from './data/recipes';
+import Footer from './components/footer';
 
 
 
@@ -56,10 +58,13 @@ function App() {
               <RecettePage recipes={recipes} />
             } />
 
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+
           <Route path="*" element={<ErrorPage />} />
         </Routes>
 
       </div>
+      <Footer />
     </div>
   )
 }
